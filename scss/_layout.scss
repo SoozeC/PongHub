@@ -2,12 +2,27 @@
     + layout
 ---------------------------------*/
 
+///////////////////////
+// FOR*DEBUGGING*ONLY*
+//////////////////////
+// *:not(path):not(g) {
+//     color:                    hsla(210, 100%, 100%, 0.9) !important;
+//     background:               hsla(210, 100%,  50%, 0.5) !important;
+//     outline:    solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+//     box-shadow: none !important; }
+///////////////////////
+
 // Less than 480px wide (Default)
+
+* {
+    box-sizing: border-box;
+}
 
 .wrapper {
     // should be inside semantic container elements such as a <header>/<main>/<footer> etc only - to 'wrap'/keep inner content from becoming too wide at certain sizes
     max-width: 100%;
-    padding: 1em;
+    padding: 0 1em;
+    margin: 0 auto;
 }
 
 // More than 480px wide
@@ -16,7 +31,7 @@
 
     .wrapper {
         max-width: 80vw;
-        padding: 2em;
+        padding: 0 2em;
     }
 }
 
@@ -26,6 +41,6 @@
 
     .wrapper {
         max-width: 960px;
-        padding: 3em;
+        padding: 0 3em;
     }
 }
