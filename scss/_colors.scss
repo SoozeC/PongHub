@@ -1,10 +1,14 @@
 /* -------------------------------
-    colors
+    + colors
 ---------------------------------*/
 
 $color-primary: #2462E9;
 $color-primary-light: #508BFB;
 $color-primary-dark: #0542D4;
 $color-secondary: #FFDFFF;
-$color-secondary-light: #FFFBFF;
+$color-secondary-light: #FFFBFF; // use instead of WHITE
 $color-secondary-dark: #E1B0E1;
+
+body {
+    background-color: $color-secondary-light;
+}
