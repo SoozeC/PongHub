@@ -1,0 +1,31 @@
+/* -------------------------------
+    + layout
+---------------------------------*/
+
+// Less than 480px wide (Default)
+
+.wrapper {
+    // should be inside semantic container elements such as a <header>/<main>/<footer> etc only - to 'wrap'/keep inner content from becoming too wide at certain sizes
+    max-width: 100%;
+    padding: 1em;
+}
+
+// More than 480px wide
+
+@media screen and (min-width: 480px){
+
+    .wrapper {
+        max-width: 80vw;
+        padding: 2em;
+    }
+}
+
+// More than 900px wide
+
+@media screen and (min-width: 900px){
+
+    .wrapper {
+        max-width: 960px;
+        padding: 3em;
+    }
+}
