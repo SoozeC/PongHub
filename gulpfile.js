@@ -6,49 +6,56 @@ let watch = require('gulp-watch');
 let gulpSequence = require('gulp-sequence');
 let concat = require('gulp-concat');
 let uglify = require('gulp-uglify-es').default;
+let tabify = require('gulp-tabify');
 
 
 gulp.task('sass', function () {
-    var stream = gulp.src('./scss/styles.scss')
+    var stream = gulp.src('./scss/main.scss')
         .pipe(sass())
         .pipe(gulp.dest('./css/'))
-        .pipe(rename('styles.css'));
+        .pipe(rename('style.css'));
     return stream;
 });
 
 gulp.task('minify-css', () => {
-  return gulp.src('css/styles.css')
+  return gulp.src('css/style.css')
 	.pipe(cleanCSS({compatibility: 'ie8'}))
 	.pipe(rename({suffix: '.min'}))
 	.pipe(gulp.dest('./css/'));
 });
 
-gulp.task('styles', function(callback){
-	gulpSequence('sass', 'minify-css')(callback)
+gulp.task('tabItUp', function () {
+  return gulp.src('/scss/*.scss')
+    .pipe(tabify(4, true))
+    .pipe(gulp.dest('/scss'));
 });
 
-gulp.task('watch', function () {
-	gulp.watch('./scss/*.scss', ['styles']);
-});
+// gulp.task('styles', function(callback){
+// 	gulpSequence('sass', 'minify-css')(callback)
+// });
 
- gulp.task('scripts', function() {
-  return gulp.src(['./js/jquery-3.2.1.slim.js', './js/popper.js', './js/bootstrap.js'])
-    .pipe(concat('all.js'))
-    .pipe(gulp.dest('./js/'));
-});
+// gulp.task('watch', function () {
+// 	gulp.watch('./scss/*.scss', ['styles']);
+// });
+
+//  gulp.task('scripts', function() {
+//   return gulp.src("*.js")
+//     .pipe(concat('m.js'))
+//     .pipe(gulp.dest('./js/'));
+// });
 
 gulp.task("uglify", function () {
-    return gulp.src("js/all.js")
-        .pipe(rename("all.min.js"))
+    return gulp.src("js/app.js")
+        .pipe(rename("app.min.js"))
         .pipe(uglify(/* options */))
         .pipe(gulp.dest("js/"));
 });
 
-gulp.task("combineAndUgly", function (callback) {
-   gulpSequence('scripts', 'uglify')(callback)
-});
+// gulp.task("combineAndUgly", function (callback) {
+//    gulpSequence('scripts', 'uglify')(callback)
+// });
 
-gulp.task('watchJS', function () {
-    gulp.watch('./js/*.js', ['combineAndUgly']);
-});
+// gulp.task('watchJS', function () {
+//     gulp.watch('./js/*.js', ['combineAndUgly']);
+// });
 
