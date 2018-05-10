@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/SoozeC/PongHub#readme",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sequence": "^1.0.0"
   }
 }
