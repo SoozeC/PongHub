@@ -13,7 +13,7 @@ gulp.task('sass', function () {
     var stream = gulp.src('./scss/main.scss')
         .pipe(sass())
         .pipe(gulp.dest('./css/'))
-        .pipe(rename('style.css'));
+        .pipe(rename('main.css'));
     return stream;
 });
 
@@ -25,9 +25,9 @@ gulp.task('minify-css', () => {
 });
 
 gulp.task('tabItUp', function () {
-  return gulp.src('/scss/*.scss')
+  return gulp.src('./scss/suzes.scss')
     .pipe(tabify(4, true))
-    .pipe(gulp.dest('/scss'));
+    .pipe(gulp.dest('./scss'));
 });
 
 // gulp.task('styles', function(callback){
