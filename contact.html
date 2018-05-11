@@ -9,69 +9,79 @@
 		<meta name="author" content="">
 		<link href="https://fonts.googleapis.com/css?family=Oswald|Pacifico" rel="stylesheet">
 
-		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<link rel="stylesheet" type="text/css" href="css/main.min.css">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 	</head>
 <body>
-<div class="wrapper">
     <!-- NAVBAR ------------>
-    <header>
-        <nav>
+        <header>
+        <div class="wrapper">
+            <h1 id="logo"><a href="index.html">PongHub</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Articles</a></li><!--
+                 --><li><a href="#">Gallery</a></li><!--
+                 --><li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
 
-        </nav>
+        </div> <!-- close wrapper class -->
     </header>
     <!------------ /END NAVBAR -->
     
     <!-- MAIN ------------>
     <main>
 
-    	<section class ="contactForm">
-    		<h2>Contact us!</h2>
-    		<p>For more information on ping pong, please fill out the form below.</p>
-    		<label>Name: </label>
-    		<input type="text" name="name">
-    		<label>Email: </label>
-    		<input type="email" name="email">
-    		<label>Date of birth: </label>
-    		<input type="date" name="date">
-    		<p>Please note, you need to be aged 18 or above to play ping-pong.</p>
-			<label>Message: </label>
-			<textarea></textarea>
-    		<input type="checkbox" name="subscribe">
-    		<label>Please sign me up to receive lots of emails from you</label>
-    		<button>Submit</button>
-
-    	</section>
-
+	   <div class="wrapper">
+	    	<section class ="contactForm">
+	    		<h2>Contact us!</h2>
+	    		<p>For more information on ping pong, please fill out the form below.</p>
+	    		<form>
+		    		<label>Name: </label>
+		    		<input type="text" name="name" placeholder="enter your name">
+		    		<label>Email: </label>
+		    		<input type="email" name="email" placeholder="enter your email address">
+		    		<label>Date of birth: </label>
+		    		<input type="date" name="date">
+		    		<p>Please note, you need to be aged 18 or above to play ping-pong.</p>
+					<label>Message: </label>
+					<textarea placeholder="talk to me"></textarea>
+					<br>
+		    		<input type="checkbox" name="subscribe">
+		    		<label>Please sign me up to receive lots of emails from you</label>
+		    		<button>Submit</button>
+	    		</form>
+	    	</section>
+	     </div> <!-- close wrapper class -->
     </main>
     <!------------ /END MAIN -->
 
     <!-- FOOTER ------------>
     <footer>
-
-		<div class ="col1">
-			<h2>PongHub</h2>
-			<div class="footerText">
-				<p>Address Line1</p>
-				<p>Address Line2</p>
-				<p>Address Line3</p>
-				<p>Address Line4</p>
-				<p>Address Line5</p>
+		<div class="wrapper">
+			<div class ="col1">
+				<h2>PongHub</h2>
+				<div class="footerText">
+					<p>Address Line1</p>
+					<p>Address Line2</p>
+					<p>Address Line3</p>
+					<p>Address Line4</p>
+					<p>Address Line5</p>
+				</div>
 			</div>
-		</div>
-		<div class ="col2">
-			<ul>
-				<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-				<li><a href="#"><i class="fab fa-twitter"></i></a></li>
-				<li><a href="#"><i class="fab fa-youtube"></i></a></li>
-				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
-				<li><a href="#"><i class="fab fa-snapchat-ghost"></i></a></li>
-			</ul>
-			<p class="footerText">Created by LSD&D &copy; 2018</p>	
-		</div>
-
+			<div class ="col2">
+				<ul>
+					<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fab fa-youtube"></i></a></li>
+					<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+					<li><a href="#"><i class="fab fa-snapchat-ghost"></i></a></li>
+				</ul>
+				<p class="footerText">Created by LSD&D &copy; 2018</p>	
+			</div>
+	     </div> <!-- close wrapper class -->
     </footer>
-</div>
+
     <!------------ /END FOOTER -->
 
     <!-- JS ------------>

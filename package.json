@@ -27,6 +27,11 @@
     "gulp-tabify": "0.0.2",
     "gulp-uglify": "^3.0.0",
     "gulp-uglify-es": "^1.0.1",
+<<<<<<< HEAD
+    "gulp-watch": "^5.0.0",
+    "watch": "^1.0.2"
+=======
     "gulp-watch": "^5.0.0"
+>>>>>>> 773e02705fffb76a10e1911a18a75d09009b4d23
   }
 }
