@@ -7,14 +7,6 @@ header {
     overflow: auto;
     position: relative;
     padding: 3em 0;
-    
-    &::after {
-        content: '';
-        position: absolute;
-        left: 2em; right: 2em;
-        bottom: 0px;
-        border-bottom: 1px solid $color-secondary;
-    }
 
     .wrapper {
         display: flex;

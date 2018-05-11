@@ -25,15 +25,15 @@
     margin: 0 auto;
 
     header {
+        text-align: center;
         margin: 0 -1em;
         position: relative;
         background: $color-primary url('../images/closeup.jpg') no-repeat;
         background-size: cover;
-
-        padding: 3em;
+        padding: 10vw;
 
         .hero-txt {
-            max-width: 70%;
+            margin-bottom: .7em;
         }
         
     }
@@ -48,6 +48,8 @@
 
         header {
             margin: 0 -3em;
+            padding: 15vw;
+            text-align: left;
         }
     }
 }
@@ -60,5 +62,12 @@
         min-width: 900px;
         max-width: 1200px;
         padding: 0 3em;
+
+        header {
+            .hero-txt {
+                max-width: 12em;
+                margin-bottom: 1em;
+            }
+        }
     }
 }
