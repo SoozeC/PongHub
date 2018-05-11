@@ -76,6 +76,8 @@ body {
     max-width: 960px;
     padding: 0 3em; } }
 
+.
+
 /* -------------------------------
     + typography
 ---------------------------------*/
@@ -138,6 +140,19 @@ header {
     header a:hover {
       color: #2462E9; }
 
+
+/* -------------------------------
+    + images 
+---------------------------------*/
+
+img {
+  max-width: 100%;
+  display: block; 
+  margin: 5px auto;
+}
+
+
+=======
 .col1, .col2 {
   padding: 20px; }
 
@@ -186,3 +201,4 @@ input, textarea {
   border-radius: 5px;
   padding: 10px;
   width: 100%; }
+
