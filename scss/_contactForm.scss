@@ -1,38 +1,32 @@
-
-
-h2 {
-	font-family: 'Pacifico', cursive;
-	font-size: 40px;
-	padding: 10px 0px;
-}
-
 .contactForm {
 	margin: 20px;
 	padding: 10px;
 
 	h2 {
 		font-family: 'Pacifico', cursive;
+		color: $color-secondary-light;
+		background: linear-gradient(to bottom right, $color-primary-dark, $color-secondary-dark);
 		font-size: 40px;
-		padding: 10px 0px;
+		padding: 10px;
 	}
 	p {
-		padding: 10px, 0px
+		padding: 10px;
 	}
 	label {
 		display: block;
-		padding: 10px, 0px;
-		margin: 10px, 0px;
+		padding: 10px;
+		// margin: 10px;
 	}
 
 	input, textarea {
 	border-radius: 5px;
 	padding: 10px;
-	margin: 10px 0px;
+	// margin: 10px 0px;
 	width: 100%;
 	}
 
 	textarea {
-		height: 200px;
+	height: 200px;
 	}
 }
 

@@ -170,28 +170,23 @@ footer {
     color: #FFFBFF;
     background-color: #0542D4; }
 
-label {
-  display: block; }
-
-h2 {
-  font-family: 'Pacifico', cursive;
-  font-size: 40px;
-  padding: 10px 0px; }
-
 .contactForm {
   margin: 20px;
   padding: 10px; }
   .contactForm h2 {
     font-family: 'Pacifico', cursive;
+    color: #FFFBFF;
+    background: linear-gradient(to bottom right, #0542D4, #E1B0E1);
     font-size: 40px;
-    padding: 10px 0px; }
+    padding: 10px; }
   .contactForm p {
-    padding: 10px, 0px; }
-
-input, textarea {
-  border-radius: 5px;
-  padding: 10px;
-  width: 100%; }
-
-textarea {
-  height: 300px; }
+    padding: 10px; }
+  .contactForm label {
+    display: block;
+    padding: 10px; }
+  .contactForm input, .contactForm textarea {
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%; }
+  .contactForm textarea {
+    height: 200px; }
