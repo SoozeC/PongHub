@@ -1,6 +1,4 @@
-label {
-	display: block;
-}
+
 
 h2 {
 	font-family: 'Pacifico', cursive;
@@ -17,10 +15,26 @@ h2 {
 		font-size: 40px;
 		padding: 10px 0px;
 	}
-}
+	p {
+		padding: 10px, 0px
+	}
+	label {
+		display: block;
+		padding: 10px, 0px;
+		margin: 10px, 0px;
+	}
 
-input, textarea {
+	input, textarea {
 	border-radius: 5px;
 	padding: 10px;
+	margin: 10px 0px;
 	width: 100%;
+	}
+
+	textarea {
+		height: 200px;
+	}
 }
+
+
+
