@@ -96,6 +96,8 @@ header .hero-txt {
       max-width: 12em;
       margin-bottom: 1em; } }
 
+.
+
 /* -------------------------------
     + typography
 ---------------------------------*/
@@ -169,6 +171,19 @@ header {
     header a:hover {
       color: #2462E9; }
 
+
+/* -------------------------------
+    + images 
+---------------------------------*/
+
+img {
+  max-width: 100%;
+  display: block; 
+  margin: 5px auto;
+}
+
+
+=======
 .col1, .col2 {
   padding: 20px; }
 
@@ -203,3 +218,18 @@ footer {
 
 label {
   display: block; }
+
+form {
+  margin: 20px;
+  padding: 10px; }
+  form h2 {
+    font-family: 'Pacifico', cursive;
+    color: #2462E9;
+    font-size: 40px;
+    padding: 10px; }
+
+input, textarea {
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%; }
+
