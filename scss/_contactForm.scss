@@ -2,6 +2,15 @@
 	margin: 20px;
 	padding: 10px;
 
+  label {
+	  display: block;
+  } 
+
+  form {
+	  margin: 20px;
+	  padding: 10px;
+  }
+
 	h2 {
 		font-family: 'Pacifico', cursive;
 		color: $color-secondary-light;
