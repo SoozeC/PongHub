@@ -201,19 +201,28 @@ footer {
     color: #FFFBFF;
     background-color: #0542D4; }
 
-label {
-  display: block; }
-
-form {
+.contactForm {
   margin: 20px;
   padding: 10px; }
-  form h2 {
+  .contactForm label {
+    display: block; }
+  .contactForm form {
+    margin: 20px;
+    padding: 10px; }
+  .contactForm h2 {
     font-family: 'Pacifico', cursive;
-    color: #2462E9;
+    color: #FFFBFF;
+    background: linear-gradient(to bottom right, #0542D4, #E1B0E1);
     font-size: 40px;
     padding: 10px; }
-
-input, textarea {
-  border-radius: 5px;
-  padding: 10px;
-  width: 100%; }
+  .contactForm p {
+    padding: 10px; }
+  .contactForm label {
+    display: block;
+    padding: 10px; }
+  .contactForm input, .contactForm textarea {
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%; }
+  .contactForm textarea {
+    height: 200px; }
