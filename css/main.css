@@ -1,0 +1,139 @@
+/* -------------------------------
+	+ reset
+---------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* -------------------------------
+    + colors
+---------------------------------*/
+body {
+  background-color: #FFFBFF; }
+
+/* -------------------------------
+    + layout
+---------------------------------*/
+* {
+  box-sizing: border-box; }
+
+.wrapper {
+  max-width: 100%;
+  padding: 0 1em;
+  margin: 0 auto; }
+
+@media screen and (min-width: 480px) {
+  .wrapper {
+    max-width: 80vw;
+    padding: 0 2em; } }
+
+@media screen and (min-width: 900px) {
+  .wrapper {
+    max-width: 960px;
+    padding: 0 3em; } }
+
+/* -------------------------------
+    + typography
+---------------------------------*/
+body {
+  font-size: 14px;
+  line-height: 1.3;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+  body #logo {
+    font-family: 'Pacifico', cursive;
+    letter-spacing: -.04em;
+    font-size: 2.5em; }
+  body h1, body h2 {
+    font-family: "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
+  body h1 {
+    font-size: 2em; }
+  body h1 {
+    font-size: 1.4em; }
+
+@media screen and (min-width: 480px) {
+  body {
+    font-size: 16px;
+    line-height: 1.4; } }
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 18px;
+    line-height: 1.5; } }
+
+/* -------------------------------
+    + navbar
+---------------------------------*/
+header {
+  overflow: auto;
+  position: relative;
+  padding: 3em 0; }
+  header::after {
+    content: '';
+    position: absolute;
+    left: 2em;
+    right: 2em;
+    bottom: 0px;
+    border-bottom: 1px solid #FFDFFF; }
+  header .wrapper {
+    box-sizing: content-box;
+    display: flex;
+    justify-content: space-between; }
+  header #logo {
+    display: inline-block;
+    color: #508BFB; }
+  header nav ul li {
+    display: inline-block;
+    text-align: center;
+    margin-left: 4vw;
+    padding: 1em 0;
+    color: #508BFB; }
+  header a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 300ms ease; }
+    header a:hover {
+      color: #2462E9; }
