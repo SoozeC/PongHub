@@ -97,6 +97,7 @@ section#gallery {
     .wrapper section#articles img, .wrapper section#gallery img {
       display: block;
       width: 100%;
+      min-height: 40vh;
       object-fit: cover;
       object-position: 50% 50%; }
   .wrapper section#gallery {
