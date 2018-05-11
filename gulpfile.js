@@ -7,6 +7,7 @@ let gulpSequence = require('gulp-sequence');
 let concat = require('gulp-concat');
 let uglify = require('gulp-uglify-es').default;
 let tabify = require('gulp-tabify');
+let imagemin = require('gulp-imagemin');
 
 
 gulp.task('sass', function () {
@@ -31,6 +32,22 @@ gulp.task('styles', function(callback){
 gulp.task('watch', function () {
 	gulp.watch(['./scss/*.scss'], ['styles']);
 });
+
+gulp.task('minify-imgs', () =>
+    gulp.src('./images/*')
+        .pipe(imagemin([
+            imagemin.gifsicle({interlaced: true}),
+            imagemin.jpegtran({progressive: true}),
+            imagemin.optipng({optimizationLevel: 5}),
+            imagemin.svgo({
+                plugins: [
+                    {removeViewBox: true},
+                    {cleanupIDs: false}
+                ]
+            })
+        ]))
+        .pipe(gulp.dest('./images'))
+);
 
 // gulp.task('watch', function () {
 // 	gulp.watch('/scss/*.scss', 'sass');
