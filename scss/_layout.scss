@@ -26,10 +26,16 @@
 
     header {
         margin: 0 -1em;
+        position: relative;
+        background: $color-primary url('../images/closeup.jpg') no-repeat;
+        background-size: cover;
 
-        img {
-            width: 100%;
+        padding: 3em;
+
+        .hero-txt {
+            max-width: 70%;
         }
+        
     }
 }
 

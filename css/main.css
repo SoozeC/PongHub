@@ -55,6 +55,10 @@ table {
 body {
   background-color: #FFFBFF; }
 
+header .hero-txt {
+  color: #FFFBFF;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); }
+
 /* -------------------------------
     + layout
 ---------------------------------*/
@@ -66,9 +70,13 @@ body {
   padding: 0 1em;
   margin: 0 auto; }
   .wrapper header {
-    margin: 0 -1em; }
-    .wrapper header img {
-      width: 100%; }
+    margin: 0 -1em;
+    position: relative;
+    background: #2462E9 url("../images/closeup.jpg") no-repeat;
+    background-size: cover;
+    padding: 3em; }
+    .wrapper header .hero-txt {
+      max-width: 70%; }
 
 @media screen and (min-width: 480px) {
   .wrapper {
@@ -99,6 +107,9 @@ body {
     font-size: 2em; }
   body h1 {
     font-size: 1.4em; }
+  body .hero-txt {
+    font-size: 2.5em;
+    margin-bottom: 1em; }
 
 @media screen and (min-width: 480px) {
   body {
@@ -109,6 +120,23 @@ body {
   body {
     font-size: 18px;
     line-height: 1.5; } }
+
+/* -------------------------------
+    + button
+---------------------------------*/
+.btn {
+  border: 0;
+  margin-top: 1em 0;
+  padding: 1em;
+  border-radius: 2px;
+  background: #2462E9;
+  text-transform: uppercase;
+  color: #FFFBFF;
+  letter-spacing: 0.05em;
+  font-weight: lighter;
+  font-size: .9em; }
+  .btn:hover {
+    background: #FFFBFF; }
 
 /* -------------------------------
     + navbar
