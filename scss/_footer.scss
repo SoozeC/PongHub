@@ -10,7 +10,7 @@ footer {
 	background: linear-gradient(to bottom right, $color-primary-dark, $color-secondary-dark);
 	color: $color-secondary-light; 
 	text-align: center;
-	font-family: 'Oswald', sans-serif;
+	font-family: $font-body, sans-serif;
 
 	h2 {
 		font-family: 'Pacifico', cursive;
