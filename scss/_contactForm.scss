@@ -2,15 +2,16 @@ label {
 	display: block;
 }
 
-h2 {
-	font-family: 'Pacifico', cursive;
-	font-size: 40px;
-	padding: 10px;
-}
-
 form {
 	margin: 20px;
 	padding: 10px;
+
+	h2 {
+		font-family: 'Pacifico', cursive;
+		color: $color-primary;
+		font-size: 40px;
+		padding: 10px;
+	}
 }
 
 input, textarea {

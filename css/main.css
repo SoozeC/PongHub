@@ -172,3 +172,17 @@ footer {
 
 label {
   display: block; }
+
+form {
+  margin: 20px;
+  padding: 10px; }
+  form h2 {
+    font-family: 'Pacifico', cursive;
+    color: #2462E9;
+    font-size: 40px;
+    padding: 10px; }
+
+input, textarea {
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%; }
