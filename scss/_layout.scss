@@ -35,8 +35,48 @@
         .hero-txt {
             margin-bottom: .7em;
         }
-        
     }
+
+    section#articles, section#gallery {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        
+        margin: 0 -2em;
+
+        & > div {
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+    }
+
+    section#gallery {
+        flex-direction: column;
+    }
+
+    .section-image {
+        align-self: stretch;
+    }
+
+    .section-text {
+        padding: 3em 2em;
+        text-align: center;
+
+        h1 { margin-bottom: .5em; }
+
+        .btn {
+            margin-top: 2em;
+        }
+    }
+
 }
 
 // More than 480px wide
@@ -50,6 +90,21 @@
             margin: 0 -3em;
             padding: 15vw;
             text-align: left;
+        }
+
+        section#articles, section#gallery {
+            display: flex;
+            flex-direction: row;
+            margin: 0 -2em;
+    
+            & > div {
+                width: 50%;
+            }
+    
+            img {
+                // width: 100%;
+                // height: 100%;
+            }
         }
     }
 }
@@ -68,6 +123,10 @@
                 max-width: 12em;
                 margin-bottom: 1em;
             }
+        }
+
+        section#articles, section#gallery {
+            margin: 0 -3em;
         }
     }
 }

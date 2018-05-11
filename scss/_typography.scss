@@ -31,10 +31,15 @@ body {
     }
 
     .hero-txt {
-        font-size: 2.5em;
+        font-size: 2.0em;
     }
 
-    
+    section#articles, section#gallery {
+        
+        p {
+            font-weight: lighter;
+        }
+    }    
 
 }
 
@@ -45,6 +50,10 @@ body {
     body {
         font-size: 16px;
         line-height: 1.4;
+
+        .hero-txt {
+            font-size: 2.5em;
+        }
     }
 }
 
@@ -55,5 +64,9 @@ body {
     body {
         font-size: 18px;
         line-height: 1.5;
+
+        .hero-txt {
+            font-size: 3em;
+        }
     }
 }

@@ -59,6 +59,12 @@ header .hero-txt {
   color: #FFFBFF;
   text-shadow: 0 5px 20px rgba(0, 0, 0, 0.8); }
 
+section#articles {
+  background: #FFDFFF; }
+
+section#gallery {
+  background: papayawhip; }
+
 /* -------------------------------
     + layout
 ---------------------------------*/
@@ -78,6 +84,31 @@ header .hero-txt {
     padding: 10vw; }
     .wrapper header .hero-txt {
       margin-bottom: .7em; }
+  .wrapper section#articles, .wrapper section#gallery {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 0 -2em; }
+    .wrapper section#articles > div, .wrapper section#gallery > div {
+      width: 100%;
+      height: 100%; }
+    .wrapper section#articles img, .wrapper section#gallery img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: 50% 50%; }
+  .wrapper section#gallery {
+    flex-direction: column; }
+  .wrapper .section-image {
+    align-self: stretch; }
+  .wrapper .section-text {
+    padding: 3em 2em;
+    text-align: center; }
+    .wrapper .section-text h1 {
+      margin-bottom: .5em; }
+    .wrapper .section-text .btn {
+      margin-top: 2em; }
 
 @media screen and (min-width: 480px) {
   .wrapper {
@@ -85,7 +116,13 @@ header .hero-txt {
     .wrapper header {
       margin: 0 -3em;
       padding: 15vw;
-      text-align: left; } }
+      text-align: left; }
+    .wrapper section#articles, .wrapper section#gallery {
+      display: flex;
+      flex-direction: row;
+      margin: 0 -2em; }
+      .wrapper section#articles > div, .wrapper section#gallery > div {
+        width: 50%; } }
 
 @media screen and (min-width: 900px) {
   .wrapper {
@@ -94,7 +131,9 @@ header .hero-txt {
     padding: 0 3em; }
     .wrapper header .hero-txt {
       max-width: 12em;
-      margin-bottom: 1em; } }
+      margin-bottom: 1em; }
+    .wrapper section#articles, .wrapper section#gallery {
+      margin: 0 -3em; } }
 
 /* -------------------------------
     + typography
@@ -114,24 +153,30 @@ body {
   body h2 {
     font-size: 1.4em; }
   body .hero-txt {
-    font-size: 2.5em; }
+    font-size: 2.0em; }
+  body section#articles p, body section#gallery p {
+    font-weight: lighter; }
 
 @media screen and (min-width: 480px) {
   body {
     font-size: 16px;
-    line-height: 1.4; } }
+    line-height: 1.4; }
+    body .hero-txt {
+      font-size: 2.5em; } }
 
 @media screen and (min-width: 1200px) {
   body {
     font-size: 18px;
-    line-height: 1.5; } }
+    line-height: 1.5; }
+    body .hero-txt {
+      font-size: 3em; } }
 
 /* -------------------------------
     + button
 ---------------------------------*/
 .btn {
+  display: inline-block;
   border: 0;
-  margin-top: 1em;
   padding: 1em;
   border-radius: 2px;
   background: #2462E9;
@@ -139,9 +184,12 @@ body {
   color: #FFFBFF;
   letter-spacing: 0.05em;
   font-weight: lighter;
-  font-size: .9em; }
+  font-size: .8em;
+  text-decoration: none;
+  transition: all 100ms ease-in; }
   .btn:hover {
-    background: #FFFBFF; }
+    background: #FFFBFF;
+    color: #2462E9; }
 
 /* -------------------------------
     + navbar
@@ -215,6 +263,11 @@ footer {
     background: linear-gradient(to bottom right, #0542D4, #E1B0E1);
     font-size: 40px;
     padding: 10px; }
+
+input, textarea {
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%; }
   .contactForm p {
     padding: 10px; }
   .contactForm label {
