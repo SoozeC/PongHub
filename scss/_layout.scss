@@ -20,9 +20,13 @@
 
 .wrapper {
     // should be inside semantic container elements such as a <header>/<main>/<footer> etc only - to 'wrap'/keep inner content from becoming too wide at certain sizes
-    max-width: 100%;
+    width: 100%;
     padding: 0 1em;
     margin: 0 auto;
+
+    header {
+        margin: 0 -1em;
+    }
 }
 
 // More than 480px wide
@@ -30,8 +34,12 @@
 @media screen and (min-width: 480px){
 
     .wrapper {
-        max-width: 80vw;
+        width: 90vw;
         padding: 0 2em;
+
+        header {
+            margin: 0 -3em;
+        }
     }
 }
 
@@ -40,7 +48,8 @@
 @media screen and (min-width: 900px){
 
     .wrapper {
-        max-width: 960px;
+        min-width: 900px;
+        max-width: 1200px;
         padding: 0 3em;
     }
 }

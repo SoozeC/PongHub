@@ -17,9 +17,9 @@ header {
     }
 
     .wrapper {
-        box-sizing: content-box;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     #logo {
@@ -35,7 +35,7 @@ header {
                 display: inline-block;
                 text-align: center;
                 margin-left: 4vw;
-                padding: 1em 0;
+                // padding: 1em 0;
                 color: $color-primary-light;
             }
         }
