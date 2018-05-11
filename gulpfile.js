@@ -13,30 +13,34 @@ gulp.task('sass', function () {
     var stream = gulp.src('./scss/main.scss')
         .pipe(sass())
         .pipe(gulp.dest('./css/'))
-        .pipe(rename('style.css'));
+        .pipe(rename('main.css'));
     return stream;
 });
 
 gulp.task('minify-css', () => {
-  return gulp.src('css/style.css')
-	.pipe(cleanCSS({compatibility: 'ie8'}))
-	.pipe(rename({suffix: '.min'}))
-	.pipe(gulp.dest('./css/'));
+    return gulp.src('css/main.css')
+      .pipe(cleanCSS({compatibility: 'ie8'}))
+      .pipe(rename({suffix: '.min'}))
+      .pipe(gulp.dest('./css/'));
+});
+  
+gulp.task('styles', function(callback){
+	gulpSequence('sass', 'minify-css')(callback)
 });
 
-gulp.task('tabItUp', function () {
-  return gulp.src('/scss/*.scss')
-    .pipe(tabify(4, true))
-    .pipe(gulp.dest('/scss'));
+gulp.task('watch', function () {
+	gulp.watch(['./scss/*.scss'], ['styles']);
 });
-
-// gulp.task('styles', function(callback){
-// 	gulpSequence('sass', 'minify-css')(callback)
-// });
 
 // gulp.task('watch', function () {
-// 	gulp.watch('./scss/*.scss', ['styles']);
+// 	gulp.watch('/scss/*.scss', 'sass');
 // });
+
+// gulp.task('tabItUp', function () {
+//     return gulp.src('/scss/*.scss')
+//       .pipe(tabify(4, true))
+//       .pipe(gulp.dest('/scss'));
+//   });
 
 //  gulp.task('scripts', function() {
 //   return gulp.src("*.js")
@@ -44,12 +48,12 @@ gulp.task('tabItUp', function () {
 //     .pipe(gulp.dest('./js/'));
 // });
 
-gulp.task("uglify", function () {
-    return gulp.src("js/app.js")
-        .pipe(rename("app.min.js"))
-        .pipe(uglify(/* options */))
-        .pipe(gulp.dest("js/"));
-});
+// gulp.task("uglify", function () {
+//     return gulp.src("js/app.js")
+//         .pipe(rename("app.min.js"))
+//         .pipe(uglify(/* options */))
+//         .pipe(gulp.dest("js/"));
+// });
 
 // gulp.task("combineAndUgly", function (callback) {
 //    gulpSequence('scripts', 'uglify')(callback)
