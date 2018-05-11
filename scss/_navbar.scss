@@ -7,19 +7,11 @@ header {
     overflow: auto;
     position: relative;
     padding: 3em 0;
-    
-    &::after {
-        content: '';
-        position: absolute;
-        left: 2em; right: 2em;
-        bottom: 0px;
-        border-bottom: 1px solid $color-secondary;
-    }
 
     .wrapper {
-        box-sizing: content-box;
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     #logo {
@@ -35,7 +27,7 @@ header {
                 display: inline-block;
                 text-align: center;
                 margin-left: 4vw;
-                padding: 1em 0;
+                // padding: 1em 0;
                 color: $color-primary-light;
             }
         }

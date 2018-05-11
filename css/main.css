@@ -55,6 +55,10 @@ table {
 body {
   background-color: #FFFBFF; }
 
+header .hero-txt {
+  color: #FFFBFF;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 0.8); }
+
 /* -------------------------------
     + layout
 ---------------------------------*/
@@ -62,19 +66,35 @@ body {
   box-sizing: border-box; }
 
 .wrapper {
-  max-width: 100%;
+  width: 100%;
   padding: 0 1em;
   margin: 0 auto; }
+  .wrapper header {
+    text-align: center;
+    margin: 0 -1em;
+    position: relative;
+    background: #2462E9 url("../images/closeup.jpg") no-repeat;
+    background-size: cover;
+    padding: 10vw; }
+    .wrapper header .hero-txt {
+      margin-bottom: .7em; }
 
 @media screen and (min-width: 480px) {
   .wrapper {
-    max-width: 80vw;
-    padding: 0 2em; } }
+    padding: 0 2em; }
+    .wrapper header {
+      margin: 0 -3em;
+      padding: 15vw;
+      text-align: left; } }
 
 @media screen and (min-width: 900px) {
   .wrapper {
-    max-width: 960px;
-    padding: 0 3em; } }
+    min-width: 900px;
+    max-width: 1200px;
+    padding: 0 3em; }
+    .wrapper header .hero-txt {
+      max-width: 12em;
+      margin-bottom: 1em; } }
 
 .
 
@@ -93,8 +113,10 @@ body {
     font-family: "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
   body h1 {
     font-size: 2em; }
-  body h1 {
+  body h2 {
     font-size: 1.4em; }
+  body .hero-txt {
+    font-size: 2.5em; }
 
 @media screen and (min-width: 480px) {
   body {
@@ -107,23 +129,33 @@ body {
     line-height: 1.5; } }
 
 /* -------------------------------
+    + button
+---------------------------------*/
+.btn {
+  border: 0;
+  margin-top: 1em;
+  padding: 1em;
+  border-radius: 2px;
+  background: #2462E9;
+  text-transform: uppercase;
+  color: #FFFBFF;
+  letter-spacing: 0.05em;
+  font-weight: lighter;
+  font-size: .9em; }
+  .btn:hover {
+    background: #FFFBFF; }
+
+/* -------------------------------
     + navbar
 ---------------------------------*/
 header {
   overflow: auto;
   position: relative;
   padding: 3em 0; }
-  header::after {
-    content: '';
-    position: absolute;
-    left: 2em;
-    right: 2em;
-    bottom: 0px;
-    border-bottom: 1px solid #FFDFFF; }
   header .wrapper {
-    box-sizing: content-box;
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
   header #logo {
     display: inline-block;
     color: #508BFB; }
@@ -131,7 +163,6 @@ header {
     display: inline-block;
     text-align: center;
     margin-left: 4vw;
-    padding: 1em 0;
     color: #508BFB; }
   header a {
     text-decoration: none;
