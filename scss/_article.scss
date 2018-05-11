@@ -1,0 +1,18 @@
+h2 {
+	font-family: 'Pacifico', cursive;
+	color: $color-secondary-dark;
+	background: linear-gradient(to bottom right, $color-primary-dark, $color-secondary-dark);
+	font-size: 40px;
+	padding: 10px;
+}
+
+p {
+	padding: 10px;
+}
+
+blockquote {
+	margin: 20px;
+	text-align: center;
+	text-decoration: italic;
+	color: $color-secondary-dark;
+}
