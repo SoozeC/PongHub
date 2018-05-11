@@ -67,10 +67,11 @@ body {
   margin: 0 auto; }
   .wrapper header {
     margin: 0 -1em; }
+    .wrapper header img {
+      width: 100%; }
 
 @media screen and (min-width: 480px) {
   .wrapper {
-    width: 90vw;
     padding: 0 2em; }
     .wrapper header {
       margin: 0 -3em; } }

@@ -26,6 +26,10 @@
 
     header {
         margin: 0 -1em;
+
+        img {
+            width: 100%;
+        }
     }
 }
 
@@ -34,7 +38,6 @@
 @media screen and (min-width: 480px){
 
     .wrapper {
-        width: 90vw;
         padding: 0 2em;
 
         header {
